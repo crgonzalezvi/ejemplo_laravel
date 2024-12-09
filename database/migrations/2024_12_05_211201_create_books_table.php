@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('author_id')->references('id')->on('authors'); //Llave fornanea que apunta al id de authors
             $table->text('title');
             $table->text('description')->nullable();
+            //Test
             $table->timestamps();
         });
     }
