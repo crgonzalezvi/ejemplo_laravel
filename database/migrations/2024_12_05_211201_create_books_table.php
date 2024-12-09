@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('author_id'); //Crear campo de tipo entero llamado author_id
-            $table->foreign('author_id')->references('id')->on('authors'); //Llave fornanea que apunta al id de authors
-            $table->text('title');
-            $table->text('description')->nullable();
+            $table->string('title');
+            $table->date('published_at')->comment('Fecha de publicación');
+            $table->string('genre');
             $table->timestamps();
         });
     }
